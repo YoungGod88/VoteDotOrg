@@ -36,25 +36,5 @@ RSpec.describe Address, :type => :model do
         expect(address.to_s).to eq('129 W 81st St Apt 5A, New York, NY 10024')
       end
     end
-
-    describe '#validateAddress' do
-      let(:params) {
-        {
-          street_address: '1600 Pennsylvania Avenue NW',
-          city: 'Washington',
-          state: 'DC',
-          zip_code: '20500'
-        }
-      }
-      it 'validates that the address exists' do
-        print Address.validateAddress(
-          {
-            street_address: '1600 Pennsylvania Avenue NW',
-            city: 'Washington',
-            state: 'DC',
-            zip_code: '20500'})[:address]
-        expect(Address.validateAddress(:params)[:valid]).to eq true
-      end
-    end
   end
 end
