@@ -56,7 +56,7 @@ class Address < ApplicationRecord
     end
   end
 
-  def self.getStreetType(suffix)
+  def self.getStreetType(suffix)#Not sure if the street type should be normalized
     streetAbbv = {
       'avenue' => ['avenue', 'ave'],
       'road' => ['road', 'rd']
