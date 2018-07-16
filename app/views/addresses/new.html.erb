@@ -1,0 +1,32 @@
+<div class='col-md-4 offset-md-4'></div>
+<%= form_tag '/addresses', id: 'newAddressForm', class:'col-md-4 offset-md-4', method: :post do %>
+  <div class="form-row">
+    <h2 class='address-header'>Address Validator</h2>
+  </div>
+  <div class="form-group">
+    <%= label_tag :street_address %>
+      <%= text_field_tag :street_address, nil, class: 'form-control', placeholder: 'ex. 89 Emily Jeffers Rd', required: true%>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6 city-address">
+      <%= label_tag :city %>
+      <%= text_field_tag :city, nil, class: 'form-control col-md-3', placeholder: 'ex. Randolph', required: true %>
+    </div>
+    <div class="form-group col-md-3 state-address">
+      <%= label_tag :state %>
+      <%= text_field_tag :state, nil, class: 'form-control', placeholder: 'ex. MA', required: true%>
+    </div>
+    <div class="form-group col-md-3 zip-address">
+      <%= label_tag :zip_code %>
+      <%= text_field_tag :zip_code, nil, class: 'form-control', placeholder: 'ex. 02368', required: true%>
+    </div>
+  </div>
+
+  <div class = "buttons">
+      <%= submit_tag 'Validate Address', class: 'btn validate-btn'%>
+    </div>
+<% end %>
+
+<%if !@message.nil? %>
+  <div class="col-md-8"><%= @message%></div>
+<%end%>

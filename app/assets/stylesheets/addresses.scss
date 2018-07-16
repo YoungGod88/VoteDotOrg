@@ -1,0 +1,23 @@
+// Place all the styles related to the addresses controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.city-address {
+    padding-left: 0px !important;
+}
+
+.state-address,
+.zip-address {
+    padding-right: 0px !important;
+}
+
+.validate-btn {
+    width: 100%;
+    margin-top: 5%;
+    background-color: gray;
+    color: white;
+    font-weight: bold !important;
+}
+
+.address-header {
+    font-weight: 600 !important;
+}
