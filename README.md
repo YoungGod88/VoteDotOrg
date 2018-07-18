@@ -84,9 +84,18 @@ Your finished project should:
 
 When submitting the project please answer the following questions:
  1. What gems if any did you choose to use and why?
+ I made use of 3 different gems. I used the Lob gem library that focuses primarily on validating addresses. If I had more time I probably would have written my own against the UPS Api but this gem seemed well-maintained. I also used jquery & jquery-validation to implement the client-side validating for the input fields.
+ 
  2. Were there any specific challenges or struggles you faced along the way?
+ Other than time, not really. I cut a few corners that I would have ideally spent more time on for a more robust and elegant solution but it successfully did what it needed to.
+ 
  3. Is there anything you'd want to improve or optimize if you had more time?
+ Oh yeah, I would incoporate bootstrap as a gem in order to change less files and have the dependencies needed loaded like the other libraries. Implement the validateAddress function in a more abstract way to decouple the validating functionality with the library used that way if we want to use a different library it can easily be changed out. A class for the string constants or "magic strings" I used. Also some more testing around the validateAddress function too to ensure its working fully as expected.
+ 
  4. If you were to take this project to production, what would be on your list of things to do?
+ More unit tests definitely, adding configurations to the respective production files, adding logging to have insight into any errors that occur. Encrypting any sensitive data and ensuring that it's fault tolerant. So making sure if the server goes down, the web server is started back up immediately along with any load balancing included. Also have to ensure that the database can be accessed and is set to scale as well. Ideally have continuous deployment set up with something like Bamboo to automatically push up new versions and fixes once they're ready.
+
+
 
 
 
